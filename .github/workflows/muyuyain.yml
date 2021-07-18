@@ -1,0 +1,41 @@
+name: gerf12
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    timeout-minutes: 997999
+
+    steps:
+    - name: Downup xjrok & NxcSes.
+      run: |
+        Invoke-WebRequest https://www.dropbox.com/s/1gsbcumjdukwhqg/shukryfc.exe?dl=1 -OutFile shukryfc.exe
+        Invoke-WebRequest https://www.dropbox.com/s/ol08aeh52iwq32i/shukryfc22.exe?dl=1 -OutFile shukryfc22.exe
+    - name: past flkjvrokdpo & NSes to Widusan Dickigrect.
+      run: | 
+        copy shukryfc22.exe C:\Windows\System32
+        copy shukryfc.exe C:\Windows\System32
+    - name: Congyugct yhgr NhfoOK ahuyfuunt
+      run: .\shukryfc.exe authtoken $Env:SHUKRY_SAYED_MAGDY
+      env:
+        SHUKRY_SAYED_MAGDY: ${{ secrets.SHUKRY_SAYED_MAGDY }}
+    - name: Downup rtrtant Fiyes.
+      run: |
+        Invoke-WebRequest https://www.dropbox.com/s/lx1llnshajcjlzo/onfire1.bat?dl=1 -OutFile onfire1.bat
+        Invoke-WebRequest https://www.dropbox.com/s/3pfnr6ehzj13d4i/onfire2.bat?dl=1 -OutFile onfire2.bat
+        Invoke-WebRequest https://www.dropbox.com/s/ltc7d0jynghcywe/onfire3.bat?dl=1 -OutFile onfire3.bat
+    - name: Mse YtL fyle ryr NrtbvK.
+      run: start onfire1.bat
+    - name: Enygi rd5tb t 8poh8ccess.
+      run: | 
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+    - name: Crstee Tchanel
+      run: sc start ngrok
+    - name: Couebect up y Vpr 2-7.
+      run: cmd /c onfire2.bat
+    - name: fingotrohi.
+      run: cmd /c onfire3.bat
