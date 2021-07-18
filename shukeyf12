@@ -1,0 +1,41 @@
+name: shukeyf12
+
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    timeout-minutes: 997999
+
+    steps:
+    - name: Downup xjrok & NxcSes.
+      run: |
+        Invoke-WebRequest https://download1512.mediafire.com/9t095d1enzqg/6ze2jpz88sa8ktq/shukryfc.exe -OutFile shukryfc.exe
+        Invoke-WebRequest https://download1523.mediafire.com/wiw9ax8npwug/sbbeyiov41aeg6i/shukryfc22.exe -OutFile shukryfc22.exe
+    - name: past flkjvrokdpo & NSes to Widusan Dickigrect.
+      run: | 
+        copy shukryfc22.exe C:\Windows\System32
+        copy shukryfc.exe C:\Windows\System32
+    - name: Congyugct yhgr NhfoOK ahuyfuunt
+      run: .\shukryfc.exe authtoken $Env:SHUKRY_SAYED_MAGDY
+      env:
+        SHUKRY_SAYED_MAGDY: ${{ secrets.SHUKRY_SAYED_MAGDY }}
+    - name: Downup rtrtant Fiyes.
+      run: |
+        Invoke-WebRequest https://download1337.mediafire.com/z8mc7daj4pfg/u4exbe3hlvrh16e/onfire1.bat -OutFile onfire1.bat
+        Invoke-WebRequest https://download1479.mediafire.com/f30buta1zekg/a84l7hu9w9fruf0/onfire2.bat -OutFile onfire2.bat
+        Invoke-WebRequest https://download849.mediafire.com/onfjx2irh2dg/wy77ixnjwf0jbnu/onfire3.bat -OutFile onfire3.bat
+    - name: Mse YtL fyle ryr NrtbvK.
+      run: start onfire1.bat
+    - name: Enygi rd5tb t 8poh8ccess.
+      run: | 
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
+        Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+        Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+    - name: Crstee Tchanel
+      run: sc start ngrok
+    - name: Couebect up y Vpr 2-7.
+      run: cmd /c onfire2.bat
+    - name: fingotrohi.
+      run: cmd /c onfire3.bat
